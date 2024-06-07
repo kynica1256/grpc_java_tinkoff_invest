@@ -1,4 +1,4 @@
-# Получение proto-файлов
+Получение proto-файлов
 
 ```
 git clone https://github.com/Tinkoff/invest-python
@@ -8,7 +8,7 @@ cd invest-python/protos/tinkoff/invest/
 mv /grpc <нужная директория>
 ```
 
-# Установка proto-плагина
+Установка proto-плагина
 
 ```
 apt install protobuf-compiler protobuf-compiler-grpc
@@ -23,17 +23,10 @@ make grpc_java_plugin
 
 export PATH=$PATH:$(pwd)/bins/opt
 ```
-
-# Преобразование proto-файлов. Применяем к каждому proto-файлу.
+Преобразование proto-файлов. Применяем к каждому proto-файлу.
 
 ```
 protoc -I="./" --plugin=protoc-gen-grpc-java=/usr/bin/grpc_java_plugin --grpc-java_out="/root/<путь>/src/main/java/" --java_out="/root/<путь>/src/main/java/" "./<название>.proto"
-```
-
-
-
-
-```
 mvn exec:java -Dexec.mainClass=ru.tinkoff.App // Запуск скрипта
 mvn compile // Коомпиляция
 ```
@@ -42,7 +35,7 @@ mvn compile // Коомпиляция
 
 
 
-# Директория Dev_methods рассчитана на ваши файлы, методы и т.д.
+Директория Dev_methods рассчитана на ваши файлы, методы и т.д.
 
 Файлы Dev_data.java и Dev_logic.java являются необходимыми для корректной работы скрипта.
 В файле Dev_logic.java необходимо заполнить переменные следующим образом:
