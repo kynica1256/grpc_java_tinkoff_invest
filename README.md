@@ -77,7 +77,7 @@ String[] figi = new String[]{"<FIGI>", "<FIGI>", "<FIGI>", ...}; // Цены н�
 
 ```
 String account_id = "<id>";
-String ticker_money = "<ticker>"; // EUR or RUB oe USD
+String ticker_money = "<ticker>"; // EUR or RUB or USD
 String figi = "<figi>";
 new Users_Methods().buy_method(account_id, ticker_money, figi); // Ордер на покупку
 new Users_Methods().sale_method(account_id, ticker_money, figi); // Ордер по продажу
