@@ -27,6 +27,10 @@ export PATH=$PATH:$(pwd)/bins/opt
 
 ```
 protoc -I="./" --plugin=protoc-gen-grpc-java=/usr/bin/grpc_java_plugin --grpc-java_out="/root/<путь>/src/main/java/" --java_out="/root/<путь>/src/main/java/" "./<название>.proto"
+```
+
+Запуск
+```
 mvn exec:java -Dexec.mainClass=ru.tinkoff.App // Запуск скрипта
 mvn compile // Коомпиляция
 ```
